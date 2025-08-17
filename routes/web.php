@@ -7,4 +7,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/', welcomeController::class);
 Route::resource('home', welcomeController::class);
-Route::resource('event', EventController::class);
+Route::resource('events', EventController::class);

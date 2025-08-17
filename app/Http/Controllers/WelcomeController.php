@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
+// use App\Models\Gallery;
+// use App\Models\Merchandise;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -11,7 +14,10 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $event = Event::all();
+        // $gallery = Gallery::all();
+        // $merchandise = Merchandise::all();
+        return view('welcome', compact('event'));
     }
 
     /**

@@ -1,5 +1,5 @@
 <footer
-    class="flex flex-col gap-10 bg-gradient-to-r from-black via-zinc-950 to-black px-5 md:px-25 2xl:px-50 py-15 border-t border-zinc-800">
+    class="flex flex-col gap-10 bg-gradient-to-r from-black via-zinc-950 to-black px-5 md:px-10 2xl:px-25 py-15 border-t border-zinc-800">
 
     <div class="flex gap-15 justify-between flex-wrap divide-x divide-zinc-800">
         <div class="space-y-2">
@@ -38,7 +38,7 @@
 
         </div>
 
-        <a href="#home" class="text-zinc-300">
+        <a href="/#home" class="text-zinc-300 hover:text-white px-5 py-1 outline outline-zinc-800 rounded-full h-fit">
             Scroll back up
         </a>
 

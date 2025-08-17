@@ -5,14 +5,15 @@
 
 @section('content')
 
-    <div id="about" class="scroll-m-25">
-        <x-subtitle>About Us</x-subtitle>
+    <!-- about section -->
+    <div id="about" class="scroll-mt-25">
+        <x-subheading>About Us</x-subheading>
     </div>
 
 
     <div class="flex flex-col">
 
-        <div class="flex flex-col md:flex-row justify-between gap-5">
+        <div data-aos="fade-up" class="flex flex-col md:flex-row justify-between gap-5">
             <div class="space-y-5 w-2/5 p-10">
                 <h6 class="text-2xl font-semibold">
                     Siapa Kami?
@@ -30,7 +31,7 @@
                 alt="car img" class="object-cover w-3/5 h-130 bg-zinc-500 rounded-2xl lg:rounded-l-none">
         </div>
 
-        <div class="flex flex-col md:flex-row justify-between gap-5">
+        <div data-aos="fade-left" class="flex flex-col md:flex-row justify-between gap-5">
             <p class="w-3/5 text-xl p-10 md:order-2">
                 Sejak berdiri, OnlyCars menjadi ruang untuk berbagi pengalaman, bertukar informasi, dan menikmati
                 kebersamaan
@@ -42,7 +43,7 @@
                 alt="car img" class="object-cover w-1/2 h-115 bg-zinc-500 rounded-2xl lg:rounded-r-none md:order-1">
         </div>
 
-        <div class="flex flex-col md:flex-row justify-start gap-5">
+        <div data-aos="fade-right" class="flex flex-col md:flex-row justify-start gap-5">
             <p class="w-2/5 text-xl p-10">
                 Kami terbuka untuk siapa saja, baik yang baru mengenal dunia mobil maupun yang sudah lama menjadi bagian
                 dari
@@ -56,20 +57,28 @@
 
     </div>
 
-    <div id="events" class="scroll-m-25">
-        <x-subtitle>Events</x-subtitle>
+    <!-- events section -->
+    <div id="events" class="scroll-mt-25">
+        <x-subheading>Events</x-subheading>
     </div>
 
+    <!-- events content -->
     <div class="grid grid-cols-1 md:grid-cols-2 ">
 
+        @foreach ($event as $e)
+        
+        @endforeach
+
     </div>
 
-    <div id="gallery" class="scroll-m-25">
-        <x-subtitle>Galeri</x-subtitle>
+    <!-- gallery section -->
+    <div id="gallery" class="scroll-mt-25">
+        <x-subheading>Gallery</x-subheading>
     </div>
 
-    <div id="merchandise" class="scroll-m-25">
-        <x-subtitle>Merchandise</x-subtitle>
+    <!-- merchandise section -->
+    <div id="merchandise" class="scroll-mt-25">
+        <x-subheading>Merchandise</x-subheading>
     </div>
 
 

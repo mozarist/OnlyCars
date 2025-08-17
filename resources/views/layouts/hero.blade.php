@@ -10,11 +10,11 @@
 
     <div class="flex gap-5 mt-5">
         
-    <x-button1>
+    <x-button1 whereTo="#about">
         Tentang Kami
     </x-button1>
 
-    <x-button2>
+    <x-button2 whereTo="#events">
         Cek Kegiatan Kami
     </x-button2>
 
