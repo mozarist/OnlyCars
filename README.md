@@ -37,7 +37,8 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di local environment:
 
 # 2. Install Dependencies
 - composer install
-- npm install && npm run dev
+- npm install
+- npm run dev
 
 # 3. Copy Environment File
 - cp .env.example .env
