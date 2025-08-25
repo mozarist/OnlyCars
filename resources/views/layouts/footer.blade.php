@@ -1,30 +1,30 @@
 <footer
     class="flex flex-col gap-10 bg-gradient-to-r from-black via-zinc-950 to-black px-5 md:px-10 2xl:px-25 py-15 border-t border-zinc-800">
 
-    <div class="flex gap-15 justify-between flex-wrap divide-x divide-zinc-800">
-        <div class="space-y-2">
-            <x-brand>2xl</x-brand>
+    <div class="flex gap-10 md:gap-15 justify-between flex-wrap lg:divide-x lg:divide-zinc-800">
+        <div class="w-full lg:-w-fit space-y-2">
+            <x-logo />
             <p class="max-w-sm text-sm 2xl:text-base">
                 Tempat di mana mesin, cerita, dan persahabatan berpadu menjadi satu komunitas otomotif yang hangat.
             </p>
 
         </div>
 
-        <div class="flex gap-2 pe-15">
+        <div class="flex gap-2 md:pe-15">
             <h5 class="text-zinc-500 font-semibold">
                 Links
             </h5>
 
             <div class="flex flex-col gap-2">
-                <a href="home#about" class="hover:text-sky-200">About Us</a>
-                <a href="home#events" class="hover:text-sky-200">Events</a>
-                <a href="home#gallery" class="hover:text-sky-200">Gallery</a>
-                <a href="home#merchandise" class="hover:text-sky-200">Merchandise</a>
+                <a href="/about" class="hover:text-sky-200">About Us</a>
+                <a href="/events" class="hover:text-sky-200">Events</a>
+                <a href="/gallery" class="hover:text-sky-200">Gallery</a>
+                <a href="/merchandise" class="hover:text-sky-200">Merchandise</a>
             </div>
 
         </div>
 
-        <div class="flex gap-2 pe-15">
+        <div class="flex gap-2 md:pe-15">
             <h5 class="text-zinc-500 font-semibold">
                 Socials
             </h5>
@@ -38,7 +38,7 @@
 
         </div>
 
-        <a href="#" class="text-zinc-300 hover:text-white px-5 py-1 outline outline-zinc-800 rounded-full h-fit">
+        <a href="#" class="text-zinc-300 hover:text-white px-5 py-1 outline outline-zinc-800 rounded-full text-center w-full md:w-fit h-fit">
             Scroll back up
         </a>
 
@@ -46,7 +46,7 @@
 
     <hr class="text-zinc-800">
 
-    <div class="flex gap-5 justify-between">
+    <div class="flex flex-col md:flex-row gap-5 items-center md:items-start md:justify-between">
         <span>
             Copyright &copy; 2025 <a href="https://github.com/mozarist" target="_blank">Mozarist</a>
         </span>

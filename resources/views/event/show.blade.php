@@ -13,9 +13,9 @@
 
         <hr class="text-zinc-800">
 
-        <div class="flex gap-5">
+        <div class="flex flex-col md:flex-row gap-5">
 
-            <div class="flex flex-col gap-5 w-1/3">
+            <div class="flex flex-col gap-5 w-full md:w-1/3">
 
                 <div class="space-y-2 text-zinc-300">
 
@@ -37,6 +37,9 @@
 
             </div>
 
+            <h6 class="text-zinc-500">
+                Deskripsi:
+            </h6>
             <p class="text-zinc-300 w-2/3">
                 {{ $events['deskripsi_event'] }}
             </p>

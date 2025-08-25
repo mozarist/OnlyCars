@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="flex gap-5 max-w-screen">
+    <div class="flex flex-col md:flex-row gap-5 max-w-screen">
 
         <img src="{{ asset('storage/' . $gallery['gambar_gallery']) }}" alt="gallery img"
-            class="w-3/5 h-full object-cover object-center bg-zinc-300 rounded-2xl">
+            class="w-full md:w-3/5 h-full object-cover object-center bg-zinc-300 rounded-2xl">
 
         <div class="w-full flex flex-col gap-5">
 

@@ -1,6 +1,5 @@
 @extends('layouts.main')
 
-
 @include('layouts.hero')
 
 @section('content')
@@ -11,14 +10,14 @@
     </div>
 
 
-    <div data-aos="fade-up" class="flex flex-col">
+    <div data-aos="fade-up" class="flex flex-col gap-5 md:gap-0">
 
         <div class="flex flex-col md:flex-row justify-start gap-5 md:gap-0">
             <div class="space-y-5 w-full md:w-4/10 md:p-15 md:order-2">
                 <h6 class="text-2xl font-semibold">
                     Siapa Kami?
                 </h6>
-                <p class="text-lg">
+                <p class="text-sm md:text-base lg:text-lg 2xl:text-xl">
                     OnlyCars adalah komunitas pecinta mobil yang hadir untuk menghubungkan para penggemar otomotif dari
                     berbagai
                     latar belakang. Kami percaya bahwa setiap mobil memiliki cerita, dan setiap pemiliknya punya passion
@@ -33,7 +32,7 @@
         </div>
 
         <div class="flex flex-col md:flex-row md:justify-end gap-5 md:gap-0">
-            <p class="w-full md:w-4/10 text-lg md:pt-15 md:pr-15 md:order-1">
+            <p class="w-full md:w-4/10 text-sm md:text-base lg:text-lg 2xl:text-xl md:pt-15 md:pr-15 md:order-1">
                 Sejak berdiri, OnlyCars menjadi ruang untuk berbagi pengalaman, bertukar informasi, dan menikmati
                 kebersamaan
                 dalam dunia otomotif. Dari sekadar diskusi ringan tentang modifikasi, tips perawatan, hingga konvoi dan
@@ -46,7 +45,7 @@
         </div>
 
         <div class="flex flex-col md:flex-row md:justify-end gap-5 md:gap-0">
-            <p class="w-full md:w-4/10 text-lg md:pt-15 md:pl-15 md:order-2">
+            <p class="w-full md:w-4/10 text-sm md:text-base lg:text-lg 2xl:text-xl md:pt-15 md:pl-15 md:order-2">
                 Kami terbuka untuk siapa saja, baik yang baru mengenal dunia mobil maupun yang sudah lama menjadi bagian
                 dari
                 komunitas otomotif. Dengan semangat kekeluargaan, kami ingin menciptakan lingkungan yang ramah, inspiratif,
@@ -71,16 +70,16 @@
         <!-- events content -->
         <div data-aos="fade-up" class="grid grid-cols-1 3xl:grid-cols-3 gap-4">
 
-            @foreach ($events->take(3) as $e)
+            @foreach ($events->take(4) as $e)
                 <div
                     class="bg-gradient-to-tr from-black to-zinc-900 w-full p-2 border border-zinc-800 rounded-2xl overflow-hidden hover:brightness-105 transition">
                     <a href="{{ route('events.show', $e->id) }}"
-                        class="flex flex-row 3xl:flex-col h-full w-full hover:scale-104 transition">
+                        class="flex flex-col md:flex-row 3xl:flex-col h-full w-full hover:scale-105 transition">
                         <img src="{{ asset('storage/' . $e['gambar_event']) }}" alt="{{ $e['nama_event'] }} image"
-                            class="flex-1 object-cover bg-zinc-800 rounded-l-xl overflow-hidden">
+                            class="flex-1 object-cover bg-zinc-800 rounded-t-xl md:rounded-l-xl overflow-hidden">
 
                         <div
-                            class="flex-1 p-5 flex flex-col gap-5 h-full bg-black border border-zinc-800 rounded-r-xl overflow-hidden">
+                            class="flex-1 p-5 flex flex-col gap-5 h-full bg-black border border-zinc-800 rounded-b-xl md:rounded-r-xl overflow-hidden">
 
                             <div class="flex flex-col gap-2 text-xl font-semibold">
                                 <h5 class="truncate">
@@ -134,8 +133,8 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div class="absolute inset-x-0 bottom-0 p-4">
-                                <h3 class="text-lg font-semibold">{{ $g->nama_gallery }}</h3>
-                                <p class="text-sm text-zinc-200">{{ $g->tanggal_gallery }}</p>
+                                <h3 class="text-lg font-semibold truncate">{{ $g->nama_gallery }}</h3>
+                                <p class="text-sm text-zinc-200 truncate">{{ $g->tanggal_gallery }}</p>
                             </div>
                         </div>
                     </a>
@@ -169,8 +168,8 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent transition-opacity duration-300">
                             <div class="absolute inset-x-0 bottom-0 p-4">
-                                <h3 class="text-lg font-semibold">{{ $m->nama_merchandise }}</h3>
-                                <p class="text-sm text-white font-semivold">{{ $m->harga_merchandise }},00 Rp</p>
+                                <h3 class="text-lg font-semibold truncate">{{ $m->nama_merchandise }}</h3>
+                                <p class="text-sm text-white font-semibold truncate">{{ $m->harga_merchandise }},00 Rp</p>
                             </div>
                         </div>
                     </a>
