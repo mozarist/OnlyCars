@@ -32,24 +32,24 @@ Platform ini berfungsi sebagai pusat informasi dan dokumentasi, berisi:
 Ikuti langkah-langkah berikut untuk menjalankan proyek di local environment:
 
 # 1. Clone Repository
-git clone https://github.com/username/onlycars.git
-cd onlycars
+- git clone https://github.com/username/onlycars.git
+- cd onlycars
 
 # 2. Install Dependencies
-composer install
-npm install && npm run dev
+- composer install
+- npm install && npm run dev
 
 # 3. Copy Environment File
-cp .env.example .env
+- cp .env.example .env
 
 # 4. Generate Application Key
-php artisan key:generate
+- php artisan key:generate
 
 # 5. Setup Database (sesuaikan di .env)
-php artisan migrate --seed
+- php artisan migrate --seed
 
 # 6. Storage Link (untuk akses file images publik)
-php artisan storage:link
+- php artisan storage:link
 
 # 7. Jalankan Server
-php artisan serve
+- php artisan serve
