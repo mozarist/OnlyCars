@@ -10,7 +10,7 @@
 
             @foreach ($merchandise as $m)
                 <div
-                    class="bg-gradient-to-tr from-black to-zinc-900 w-full aspect-square p-2 border border-zinc-800 rounded-2xl overflow-hidden hover:brightness-105 transition">
+                    class="bg-gradient-to-tr from-black to-zinc-900 w-full aspect-3/2 p-2 border border-zinc-800 rounded-2xl overflow-hidden hover:brightness-105 transition">
 
                     <a href="{{ route('merchandise.show', $m->id) }}"
                         class="group relative flex h-full w-full overflow-hidden rounded-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white/30">
@@ -21,10 +21,10 @@
 
                         <!-- Overlay -->
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent transition-opacity duration-300">
                             <div class="absolute inset-x-0 bottom-0 p-4">
                                 <h3 class="text-lg font-semibold">{{ $m->nama_merchandise }}</h3>
-                                <p class="text-sm text-zinc-200">{{ $m->tanggal_merchandise }}</p>
+                                <p class="text-sm text-white font-semivold">{{ $m->harga_merchandise }},00 Rp</p>
                             </div>
                         </div>
                     </a>

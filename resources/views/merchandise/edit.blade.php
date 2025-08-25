@@ -17,11 +17,18 @@
                 class="mt-1 block w-full rounded-lg bg-transparent border border-zinc-700 px-3 py-2 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-600" />
         </label>
 
-        <!-- Tanggal -->
+        <!-- Harga -->
         <label class="block mb-3">
             <span class="text-sm text-zinc-300">Tanggal</span>
-            <input type="date" name="tanggal_merchandise" value="{{ $merchandise->tanggal_merchandise }}" required
+            <input type="date" name="harga_merchandise" value="{{ $merchandise->harga_merchandise }}" required
                 class="mt-1 block w-full rounded-lg bg-transparent border border-zinc-700 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zinc-600" />
+        </label>
+
+        <!-- Deskripsi -->
+        <label class="block mb-3">
+            <span class="text-sm text-zinc-300">Deskripsi</span>
+            <textarea rows="4" name="deskripsi_merchandise" placeholder="Masukkan deskripsi" required
+                class="mt-1 block w-full rounded-lg bg-transparent border border-zinc-700 px-3 py-2 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-600">{{ $merchandise->deskripsi_merchandise }}</textarea>
         </label>
 
         <!-- Gambar -->

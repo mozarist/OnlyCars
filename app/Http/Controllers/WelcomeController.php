@@ -17,7 +17,7 @@ class WelcomeController extends Controller
         $events = Event::all();
         $gallery = Gallery::all();
         $merchandise = Merchandise::all();
-        return view('welcome', compact('events', 'gallery'));
+        return view('welcome', compact('events', 'gallery', 'merchandise'));
     }
 
     /**
