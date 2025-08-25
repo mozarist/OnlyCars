@@ -30,15 +30,15 @@
             </h5>
 
             <div class="flex flex-col gap-2">
-                <a href="home#about" class="hover:text-rose-400">Instagram</a>
-                <a href="home#events" class="hover:text-sky-400">Twitter</a>
-                <a href="home#gallery" class="hover:text-blue-500">Facebook</a>
-                <a href="home#merchandise" class="hover:text-red-500">YouTube</a>
+                <a href="#" class="hover:text-rose-400">Instagram</a>
+                <a href="#" class="hover:text-sky-400">Twitter</a>
+                <a href="#" class="hover:text-blue-500">Facebook</a>
+                <a href="#" class="hover:text-red-500">YouTube</a>
             </div>
 
         </div>
 
-        <a href="/#home" class="text-zinc-300 hover:text-white px-5 py-1 outline outline-zinc-800 rounded-full h-fit">
+        <a href="#" class="text-zinc-300 hover:text-white px-5 py-1 outline outline-zinc-800 rounded-full h-fit">
             Scroll back up
         </a>
 

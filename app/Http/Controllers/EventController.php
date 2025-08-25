@@ -22,7 +22,6 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-
         $validatedData = $request->validate([
             'nama_event' => 'required|string',
             'gambar_event' => 'nullable|image|mimes:jpg,jpeg,png,jfif,webp|max:5120',

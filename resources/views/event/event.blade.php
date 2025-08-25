@@ -32,8 +32,6 @@
                                 </div>
                             </div>
 
-                            <!-- <hr class="text-zinc-800"> -->
-
                             <div class="flex flex-col gap-2">
                                 <p
                                     class="text-zinc-500 font-semibold line-clamp-5 lg:line-clamp-3 2xl:line-clamp-7">

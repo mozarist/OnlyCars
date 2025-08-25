@@ -64,27 +64,96 @@
     </div>
 
     <!-- events section -->
-    <div id="events" class="scroll-mt-25">
+    <div id="events" class="scroll-mt-25 flex flex-col items-center gap-10">
+
         <x-subheading>Events</x-subheading>
-    </div>
 
-    <!-- events content -->
-    <div class="grid grid-cols-1 md:grid-cols-2 ">
+        <!-- events content -->
+        <div data-aos="fade-up" class="grid grid-cols-1 3xl:grid-cols-3 gap-4">
 
-        @foreach ($event as $e)
+            @foreach ($events->take(3) as $e)
+                <div
+                    class="bg-gradient-to-tr from-black to-zinc-900 w-full p-2 border border-zinc-800 rounded-2xl overflow-hidden hover:brightness-105 transition">
+                    <a href="{{ route('events.show', $e->id) }}"
+                        class="flex flex-row 3xl:flex-col h-full w-full hover:scale-104 transition">
+                        <img src="{{ asset('storage/' . $e['gambar_event']) }}" alt="{{ $e['nama_event'] }} image"
+                            class="flex-1 object-cover bg-zinc-800 rounded-l-xl overflow-hidden">
 
-        @endforeach
+                        <div
+                            class="flex-1 p-5 flex flex-col gap-5 h-full bg-black border border-zinc-800 rounded-r-xl overflow-hidden">
 
+                            <div class="flex flex-col gap-2 text-xl font-semibold">
+                                <h5 class="truncate">
+                                    {{ $e['nama_event'] }}
+                                </h5>
+                                <div class="flex flex-col gap-2 justify-start">
+                                    <h6 class="flex flex-col gap-2 text-sm text-zinc-500">
+                                        {{ $e['tanggal_event'] }}
+                                    </h6>
+                                    <p class="text-sm text-zinc-500 font-semibold truncate">
+                                        {{ $e['lokasi_event'] }}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <p class="text-zinc-500 font-semibold line-clamp-5 lg:line-clamp-3 2xl:line-clamp-7">
+                                    {{ $e['deskripsi_event'] }}
+                                </p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            @endforeach
+
+        </div>
+
+        <x-button-outline1 whereTo="events">Lihat lebih banyak event</x-button-outline1>
     </div>
 
     <!-- gallery section -->
-    <div id="gallery" class="scroll-mt-25">
+    <div id="gallery" class="scroll-mt-25 flex flex-col items-center gap-10">
         <x-subheading>Gallery</x-subheading>
+
+        <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
+
+            @foreach ($gallery->take(6) as $g)
+                <div
+                    class="bg-gradient-to-tr from-black to-zinc-900 w-full aspect-square p-2 border border-zinc-800 rounded-2xl overflow-hidden hover:brightness-105 transition">
+
+                    <a href="{{ route('gallery.show', $g->id) }}"
+                        class="group relative flex h-full w-full overflow-hidden rounded-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white/30">
+
+                        <!-- Gambar -->
+                        <img src="{{ asset('storage/' . $g->gambar_gallery) }}" alt="{{ $g->nama_gallery }} image"
+                            class="h-full w-full object-cover object-center bg-zinc-800 transition-transform duration-500 group-hover:scale-105" />
+
+                        <!-- Overlay -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute inset-x-0 bottom-0 p-4">
+                                <h3 class="text-lg font-semibold">{{ $g->nama_gallery }}</h3>
+                                <p class="text-sm text-zinc-200">{{ $g->tanggal_gallery }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            @endforeach
+
+        </div>
+
+        <x-button-outline1 whereTo="gallery">Lihat lebih banyak di galeri</x-button-outline1>
     </div>
 
     <!-- merchandise section -->
-    <div id="merchandise" class="scroll-mt-25">
+    <div id="merchandise" class="scroll-mt-25 flex flex-col items-center gap-10">
         <x-subheading>Merchandise</x-subheading>
+        
+        <x-button-outline1 whereTo="merchandise">Lihat lebih banyak merchandise</x-button-outline1>
     </div>
 
 
